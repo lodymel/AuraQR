@@ -78,6 +78,24 @@
   transform: scale(0.8) !important;
 }
 
+/* Mobile adjustments */
+@media (max-width: 480px) {
+  .section {
+    justify-content: center;
+  }
+  
+  .card {
+    padding: 16px;
+    width: auto;
+    max-width: 100%;
+  }
+  
+  .qrBox svg, .qrBox canvas, .qrBox img {
+    width: 280px;
+    height: 280px;
+  }
+}
+
 /* Responsive adjustments */
 @media (min-width: 768px) {
   .section {
