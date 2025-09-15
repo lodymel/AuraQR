@@ -14,25 +14,25 @@ import jsPDF from "jspdf";
 // Create a single QR instance and update it based on state changes.
 // Display uses fixed size, download uses selected size
 const qrCode = new QRCodeStyling({
-  width: 320, // Increased overall size
+  width: 320, 
   height: 320,
   type: "svg",
   data: "https://auraqr.app",
   qrOptions: { errorCorrectionLevel: "M" },
-  dotsOptions: { color: "#000000", type: "square" }, // "square" | "dots" | "star"
+  dotsOptions: { color: "#000000", type: "square" },
   backgroundOptions: { color: "#ffffff" },
-  imageOptions: { hideBackgroundDots: true, imageSize: 0.5, margin: 24 }, // Increased margin for better visual spacing
+  imageOptions: { hideBackgroundDots: true, imageSize: 0.5, margin: 24 },
 });
 
 export default function App() {
-  const [url, setUrl] = useState("https://auraqr.app");
+  const [url, setUrl] = useState("");
   const [fgColor, setFgColor] = useState("#000000");
   const [bgColor, setBgColor] = useState("#ffffff");
   const [bgTransparency, setBgTransparency] = useState(false);
-  const [style, setStyle] = useState("square"); // "square" | "dots"
-  const [size, setSize] = useState(320); // 256–768
+  const [style, setStyle] = useState("square");
+  const [size, setSize] = useState(320);
   const qrRef = useRef(null);
-  const previewCardRef = useRef(null); // Capture entire card for PDF including glow effect
+  const previewCardRef = useRef(null);
 
   // Append QR to render target on mount
   useEffect(() => {
