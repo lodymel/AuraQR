@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/AuraQR/static/css/main.76248b22.css",
+    "main.css": "/AuraQR/static/css/main.e54c4ae2.css",
     "main.js": "/AuraQR/static/js/main.3261c4a5.js",
     "static/js/977.4c434bdf.chunk.js": "/AuraQR/static/js/977.4c434bdf.chunk.js",
     "static/js/455.58fc8873.chunk.js": "/AuraQR/static/js/455.58fc8873.chunk.js",
@@ -9,13 +9,13 @@
     "static/media/png.svg": "/AuraQR/static/media/png.822bc59e33c682c555e3cf1d41636f02.svg",
     "static/media/pdf.svg": "/AuraQR/static/media/pdf.7f0663bd957d10a8acc7cfeddb28ae6e.svg",
     "index.html": "/AuraQR/index.html",
-    "main.76248b22.css.map": "/AuraQR/static/css/main.76248b22.css.map",
+    "main.e54c4ae2.css.map": "/AuraQR/static/css/main.e54c4ae2.css.map",
     "main.3261c4a5.js.map": "/AuraQR/static/js/main.3261c4a5.js.map",
     "977.4c434bdf.chunk.js.map": "/AuraQR/static/js/977.4c434bdf.chunk.js.map",
     "455.58fc8873.chunk.js.map": "/AuraQR/static/js/455.58fc8873.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.76248b22.css",
+    "static/css/main.e54c4ae2.css",
     "static/js/main.3261c4a5.js"
   ]
 }
