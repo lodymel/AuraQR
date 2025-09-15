@@ -126,7 +126,7 @@
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .wrap {
-    flex-direction: row; /* Horizontal layout on tablet */
+    flex-direction: row;
     height: 100px;
     max-width: 100%;
     gap: 12px;
@@ -153,7 +153,7 @@
 
 @media (min-width: 1024px) and (max-width: 1034px) {
   .wrap {
-    flex-direction: row; /* Horizontal layout on intermediate screens */
+    flex-direction: row; 
     height: 100px;
     max-width: 100%;
     gap: 12px;
@@ -181,13 +181,12 @@
 @media (min-width: 1035px) {
   .wrap {
     gap: 12px;
-    /* Remove fixed height - let parent determine height automatically */
     max-width: 200px;
   }
   
   .btn {
     flex: 1 1;
-    padding: 22px 24px;
+    padding: 24px 24px;
   }
   
   .icon {
