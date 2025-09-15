@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/AuraQR/static/css/main.01dd4423.css",
+    "main.js": "/AuraQR/static/js/main.6238e6a8.js",
+    "static/js/977.4c434bdf.chunk.js": "/AuraQR/static/js/977.4c434bdf.chunk.js",
+    "static/js/455.58fc8873.chunk.js": "/AuraQR/static/js/455.58fc8873.chunk.js",
+    "index.html": "/AuraQR/index.html",
+    "main.01dd4423.css.map": "/AuraQR/static/css/main.01dd4423.css.map",
+    "main.6238e6a8.js.map": "/AuraQR/static/js/main.6238e6a8.js.map",
+    "977.4c434bdf.chunk.js.map": "/AuraQR/static/js/977.4c434bdf.chunk.js.map",
+    "455.58fc8873.chunk.js.map": "/AuraQR/static/js/455.58fc8873.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.01dd4423.css",
+    "static/js/main.6238e6a8.js"
+  ]
+}
