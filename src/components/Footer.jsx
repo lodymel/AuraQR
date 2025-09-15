@@ -1,11 +1,12 @@
 import styles from "./Footer.module.css";
+import logoIcon from "../assets/icons/logo.svg";
 
 export default function Footer() {
   return (
     <footer className={styles.appFooter}>
       <div className={styles.footerContent}>
         <div className={styles.footerLeft}>
-          <img src={`${process.env.PUBLIC_URL}/img/logo.svg`} alt="Lody Logo" className={styles.footerLogo} />
+          <img src={logoIcon} alt="Lody Logo" className={styles.footerLogo} />
           <span className={styles.footerCopyright}>© 2025 Lody</span>
         </div>
         
