@@ -1,0 +1,124 @@
+.appFooter {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  margin-top: auto;
+  padding: 40px 24px;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.footerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.footerLeft {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.footerLogo {
+  height: 24px;
+  width: auto;
+}
+
+.footerCopyright {
+  font-size: 14px;
+  color: #999; /* Same text color as converter site */
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+.footerRight {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.footerLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  background: transparent;
+  color: #999; /* Same icon color as converter site */
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.footerLink:hover {
+  background: #f5f5f5;
+  color: #1a1a1a;
+  transform: translateY(-1px);
+  border-radius: 0;
+}
+
+.footerLink svg {
+  width: 20px;
+  height: 20px;
+  transition: all 0.2s ease;
+}
+
+/* Responsive design */
+@media (max-width: 767px) {
+  .appFooter {
+    padding: 20px 20px; /* Smaller padding */
+  }
+  
+  .footerContent {
+    flex-direction: row; /* Change to left-right layout */
+    align-items: center;
+    gap: 16px; /* Smaller spacing */
+  }
+  
+  .footerLeft {
+    justify-content: flex-start; /* Left alignment */
+    width: auto; /* Auto width */
+    gap: 8px; /* Smaller logo-text spacing */
+  }
+  
+  .footerRight {
+    justify-content: flex-end; /* Right alignment */
+    width: auto; /* Auto width */
+    gap: 8px; /* Smaller icon spacing */
+  }
+  
+  .footerLogo {
+    height: 20px; /* Smaller logo size */
+  }
+  
+  .footerCopyright {
+    font-size: 12px; /* Smaller text size */
+  }
+  
+  .footerLink {
+    width: 28px; /* Smaller icon size */
+    height: 28px;
+  }
+  
+  .footerLink svg {
+    width: 16px; /* Smaller SVG size */
+    height: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .appFooter {
+    padding: 32px 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .appFooter {
+    padding: 40px 48px;
+  }
+}

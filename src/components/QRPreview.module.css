@@ -1,0 +1,142 @@
+@keyframes minimalGlow {
+  0%, 100% { 
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.1);
+  }
+  50% { 
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.section {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  padding: 0;
+  flex: 1; /* Take equal height from parent container */
+}
+
+.card {
+  position: relative;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 0;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+  animation: minimalGlow 6s ease-in-out infinite;
+  width: 100%;
+  max-width: 100%;
+  /* Remove fixed height - let parent determine height automatically */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.08);
+  border-color: rgba(0, 0, 0, 0.12);
+}
+
+.qrBox {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.qrBox svg, .qrBox canvas, .qrBox img {
+  width: 360px;
+  height: 360px;
+  border-radius: 0;
+  transition: all 0.3s ease;
+  margin: 0 auto;
+  display: block;
+}
+
+.qrBox svg:hover, .qrBox canvas:hover, .qrBox img:hover {
+  transform: scale(1.02);
+}
+
+/* Star style - convert all dots to diamond shape */
+.qrBox.star svg rect,
+.qrBox[data-style="star"] svg rect {
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%) !important;
+  transform: scale(0.8) !important;
+}
+
+/* More powerful selector */
+.qrBox.star svg rect[fill],
+.qrBox[data-style="star"] svg rect[fill] {
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%) !important;
+  transform: scale(0.8) !important;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .section {
+    padding: 0;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  
+  .card {
+    padding: 16px;
+    margin-left: 0;
+    width: 100%;
+    /* Remove fixed height - let parent determine height automatically */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .qrBox {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  
+  .qrBox svg, .qrBox canvas, .qrBox img {
+    max-width: 400px;
+    max-height: 400px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section {
+    padding: 0;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  
+  .card {
+    padding: 38px 20px;
+    margin-left: 0;
+    width: 100%;
+    /* Remove fixed height - let parent determine height automatically */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .qrBox {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  
+  .qrBox svg, .qrBox canvas, .qrBox img {
+    max-width: 440px;
+    max-height: 440px;
+  }
+}

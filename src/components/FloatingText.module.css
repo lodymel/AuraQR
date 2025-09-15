@@ -1,0 +1,248 @@
+.floatingText {
+  position: fixed;
+  bottom: 140px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Playfair Display', 'Times New Roman', serif;
+  font-size: 64px;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.3);
+  white-space: nowrap;
+  z-index: 1;
+  pointer-events: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.textContainer {
+  width: 100%;
+  padding: 0 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.desktopText {
+  display: block;
+}
+
+.mobileText {
+  display: none;
+}
+
+.mobileLine {
+  display: block;
+  text-align: center;
+}
+
+.char {
+  display: inline-block;
+  color: rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  animation: charAppear 0.8s ease-out forwards;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(20px) scale(0.8);
+  filter: blur(20px);
+}
+
+.visible {
+  opacity: 0.3;
+  transform: translateY(0px) scale(1);
+  filter: blur(0px);
+  animation: charFloat 8s ease-in-out infinite;
+}
+
+@keyframes charAppear {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.8);
+    filter: blur(25px);
+  }
+  30% {
+    opacity: 0.1;
+    transform: translateY(10px) scale(0.9);
+    filter: blur(15px);
+  }
+  60% {
+    opacity: 0.2;
+    transform: translateY(-3px) scale(1.02);
+    filter: blur(5px);
+  }
+  100% {
+    opacity: 0.3;
+    transform: translateY(0px) scale(1);
+    filter: blur(0px);
+  }
+}
+
+@keyframes charFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+    filter: blur(0px);
+  }
+  25% {
+    transform: translateY(-8px) rotate(1.2deg);
+    filter: blur(2px);
+  }
+  50% {
+    transform: translateY(0px) rotate(0deg);
+    filter: blur(0px);
+  }
+  75% {
+    transform: translateY(6px) rotate(-1deg);
+    filter: blur(1.5px);
+  }
+}
+
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .floatingText {
+    position: relative !important; /* Change from fixed to relative */
+    bottom: auto !important; /* Remove bottom */
+    top: auto !important; /* Remove top */
+    left: auto !important; /* Remove left */
+    transform: none !important; /* Remove transform */
+    font-size: 28px !important; /* Larger font possible since split into two lines */
+    letter-spacing: 0.02em !important;
+    margin: 16px 0 4px 0 !important; /* Increase top margin slightly */
+    padding: 0 !important; /* Remove padding */
+    text-align: center !important; /* Center alignment */
+    line-height: 1.2 !important; /* Reduce line spacing */
+    width: 100% !important; /* Use full width */
+  }
+  
+  .textContainer {
+    padding: 0 20px !important; /* Same left/right padding as header */
+    width: 100% !important; /* Utilize full width */
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-direction: column !important; /* Vertical alignment */
+    text-align: center !important; /* Strengthen center alignment */
+  }
+  
+  .desktopText {
+    display: none !important; /* Hide desktop text */
+  }
+  
+  .mobileText {
+    display: block !important; /* Show mobile text */
+  }
+  
+  .mobileLine {
+    margin-bottom: 4px !important; /* Spacing between lines */
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .floatingText {
+    position: relative !important; /* Change from fixed to relative */
+    bottom: auto !important; /* Remove bottom */
+    top: auto !important; /* Remove top */
+    left: auto !important; /* Remove left */
+    transform: none !important; /* Remove transform */
+    font-size: 32px !important; /* Larger font possible since split into two lines */
+    letter-spacing: 0.02em !important;
+    margin: 18px 0 5px 0 !important; /* Increase top margin slightly */
+    padding: 0 !important; /* Remove padding */
+    text-align: center !important; /* Center alignment */
+    line-height: 1.2 !important; /* Reduce line spacing */
+    width: 100% !important; /* Use full width */
+  }
+  
+  .textContainer {
+    padding: 0 24px !important; /* Same left/right padding as header */
+    width: 100% !important; /* Utilize full width */
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-direction: column !important; /* Vertical alignment */
+    text-align: center !important; /* Strengthen center alignment */
+  }
+  
+  .desktopText {
+    display: none !important; /* Hide desktop text */
+  }
+  
+  .mobileText {
+    display: block !important; /* Show mobile text */
+  }
+  
+  .mobileLine {
+    margin-bottom: 4px !important; /* Spacing between lines */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .floatingText {
+    position: relative !important; /* Change from fixed to relative */
+    bottom: auto !important; /* Remove bottom */
+    top: auto !important; /* Remove top */
+    left: auto !important; /* Remove left */
+    transform: none !important; /* Remove transform */
+    font-size: 30px !important; /* Adjust to appropriate size */
+    white-space: nowrap !important; /* Force single line */
+    letter-spacing: 0.02em !important;
+    margin: 20px 0 6px 0 !important; /* Increase top margin slightly */
+    padding: 0 !important; /* Remove padding */
+    text-align: center !important; /* Center alignment */
+    line-height: 1.2 !important; /* Reduce line spacing */
+    width: 100% !important; /* Use full width */
+  }
+  
+  .textContainer {
+    padding: 0 40px !important; /* Same left/right padding as header */
+    width: 100% !important; /* Utilize full width */
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-wrap: wrap !important; /* Allow text wrapping */
+    text-align: center !important; /* Strengthen center alignment */
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1034px) {
+  .floatingText {
+    position: relative !important; /* Change from fixed to relative */
+    bottom: auto !important; /* Remove bottom */
+    top: auto !important; /* Remove top */
+    left: auto !important; /* Remove left */
+    transform: none !important; /* Remove transform */
+    font-size: 34px !important; /* Adjust to appropriate size */
+    white-space: nowrap !important; /* Force single line */
+    letter-spacing: 0.02em !important;
+    margin: 22px 0 7px 0 !important; /* Increase top margin slightly */
+    padding: 0 !important; /* Remove padding */
+    text-align: center !important; /* Center alignment */
+    line-height: 1.2 !important; /* Reduce line spacing */
+    width: 100% !important; /* Use full width */
+  }
+  
+  .textContainer {
+    padding: 0 40px !important; /* Same left/right padding as header */
+    width: 100% !important; /* Utilize full width */
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-wrap: wrap !important; /* Allow text wrapping */
+    text-align: center !important; /* Strengthen center alignment */
+  }
+}
+
+@media (min-width: 1035px) {
+  .floatingText {
+    position: fixed; /* Keep existing fixed on desktop */
+    bottom: 140px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 64px;
+    white-space: nowrap; /* Keep single line on desktop */
+  }
+}

@@ -1,0 +1,201 @@
+@keyframes minimalHover {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-1px); }
+}
+
+.wrap {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: flex-start;
+  padding: 0;
+  width: 100%;
+  max-width: 180px;
+  flex: 1; /* Take equal height from parent container */
+}
+
+.btn {
+  position: relative;
+  appearance: none;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 0;
+  padding: 24px 20px;
+  color: #1a1a1a;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: white;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  flex: 1; /* Fill entire area equally */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.btn:hover {
+  background: #1a1a1a;
+  border-color: #1a1a1a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn:hover .icon {
+  transform: scale(1.05);
+  fill: white !important;
+  stroke: white !important;
+}
+
+.btn:hover .icon[src] {
+  filter: invert(1) drop-shadow(0 1px 2px rgba(255, 255, 255, 0.3));
+}
+
+.btn:hover .text {
+  color: white;
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  background: #333333;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  stroke: #1a1a1a;
+  stroke-width: 2;
+  fill: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-bottom: 16px;
+}
+
+/* For img tags (SVG files) */
+.icon[src] {
+  stroke: none;
+  fill: #1a1a1a;
+  object-fit: contain;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+}
+
+.text {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  margin-top: auto;
+  transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Responsive design */
+@media (max-width: 767px) {
+  .wrap {
+    flex-direction: row;
+    height: 100px;
+    max-width: 100%;
+    gap: 12px;
+  }
+  
+  .btn {
+    height: 100%;
+    padding: 16px 12px;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .icon {
+    width: 28px;
+    height: 28px;
+    margin-bottom: 8px;
+  }
+  
+  .text {
+    font-size: 12px;
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .wrap {
+    flex-direction: row; /* Horizontal layout on tablet */
+    height: 100px;
+    max-width: 100%;
+    gap: 12px;
+  }
+  
+  .btn {
+    height: 100%;
+    padding: 16px 12px;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .icon {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 8px;
+  }
+  
+  .text {
+    font-size: 13px;
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1034px) {
+  .wrap {
+    flex-direction: row; /* Horizontal layout on intermediate screens */
+    height: 100px;
+    max-width: 100%;
+    gap: 12px;
+  }
+  
+  .btn {
+    height: 100%;
+    padding: 16px 12px;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .icon {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 8px;
+  }
+  
+  .text {
+    font-size: 14px;
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 1035px) {
+  .wrap {
+    gap: 12px;
+    /* Remove fixed height - let parent determine height automatically */
+    max-width: 200px;
+  }
+  
+  .btn {
+    flex: 1 1;
+    padding: 22px 24px;
+  }
+  
+  .icon {
+    width: 54px;
+    height: 54px;
+  }
+  
+  .text {
+    font-size: 15px;
+  }
+}

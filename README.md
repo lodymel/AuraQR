@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# AuraQR - Free Minimal QR Generator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A clean and elegant React application for generating customizable QR codes with a modern design.
 
-## Available Scripts
+## ✨ Features
 
-In the project directory, you can run:
+- **Live QR Preview**: Real-time QR code generation with instant updates
+- **Customization Options**:
+  - Foreground/Background color pickers
+  - Style toggle: Square or Dot patterns
+  - Size adjustment (256-768px)
+  - Transparent background option
+- **Multiple Export Formats**: PNG, SVG, and PDF downloads
+- **Responsive Design**: Optimized for all devices
+- **Clean Interface**: Minimal and intuitive user experience
 
-### `npm start`
+## 🛠 Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **React** with JavaScript (ES6+)
+- **CSS Modules** for scoped styling
+- **qr-code-styling** for QR generation
+- **html2canvas** + **jsPDF** for PDF export
+- **Create React App** build system
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚀 Quick Start
 
-### `npm test`
+```bash
+# Install dependencies
+npm install
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Start development server
+npm start
 
-### `npm run build`
+# Build for production
+npm run build
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📱 Responsive Design
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Mobile (≤767px)**: Single column layout
+- **Tablet (768-1023px)**: Adaptive layouts
+- **Desktop (≥1024px)**: Spacious layouts
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🎯 Usage
 
-### `npm run eject`
+1. **Enter URL**: Paste any link in the input field
+2. **Customize**: Use color pickers and style options
+3. **Export**: Download in your preferred format
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 📁 Project Structure
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+/src
+  main.jsx              # Application entry point
+  App.jsx               # Main application logic
+  App.module.css        # Global styles
+  /components
+    Hero.jsx            # Header component
+    QRPreview.jsx       # QR display component
+    Controls.jsx        # Form controls
+    DownloadBar.jsx    # Download buttons
+    Footer.jsx          # Footer component
+    FloatingText.jsx   # Animated text component
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 📄 License
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+© 2025 AuraQR
