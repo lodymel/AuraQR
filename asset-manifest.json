@@ -1,17 +1,21 @@
 {
   "files": {
     "main.css": "/AuraQR/static/css/main.01dd4423.css",
-    "main.js": "/AuraQR/static/js/main.6f12e500.js",
+    "main.js": "/AuraQR/static/js/main.af32eaec.js",
     "static/js/977.4c434bdf.chunk.js": "/AuraQR/static/js/977.4c434bdf.chunk.js",
     "static/js/455.58fc8873.chunk.js": "/AuraQR/static/js/455.58fc8873.chunk.js",
+    "static/media/svg.svg": "/AuraQR/static/media/svg.72285c15560b7f331d2e5e6094dd5e82.svg",
+    "static/media/logo.svg": "/AuraQR/static/media/logo.9139ac4486f3a23a03cbf582ab2d62ff.svg",
+    "static/media/png.svg": "/AuraQR/static/media/png.822bc59e33c682c555e3cf1d41636f02.svg",
+    "static/media/pdf.svg": "/AuraQR/static/media/pdf.7f0663bd957d10a8acc7cfeddb28ae6e.svg",
     "index.html": "/AuraQR/index.html",
     "main.01dd4423.css.map": "/AuraQR/static/css/main.01dd4423.css.map",
-    "main.6f12e500.js.map": "/AuraQR/static/js/main.6f12e500.js.map",
+    "main.af32eaec.js.map": "/AuraQR/static/js/main.af32eaec.js.map",
     "977.4c434bdf.chunk.js.map": "/AuraQR/static/js/977.4c434bdf.chunk.js.map",
     "455.58fc8873.chunk.js.map": "/AuraQR/static/js/455.58fc8873.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.01dd4423.css",
-    "static/js/main.6f12e500.js"
+    "static/js/main.af32eaec.js"
   ]
 }
