@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className={styles.appFooter}>
       <div className={styles.footerContent}>
         <div className={styles.footerLeft}>
-          <img src="/img/logo.svg" alt="Lody Logo" className={styles.footerLogo} />
+          <img src={`${process.env.PUBLIC_URL}/img/logo.svg`} alt="Lody Logo" className={styles.footerLogo} />
           <span className={styles.footerCopyright}>© 2025 Lody</span>
         </div>
         
