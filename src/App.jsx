@@ -57,6 +57,12 @@ export default function App() {
 
   // Download: PNG/SVG uses selected size, PDF captures card area
   const download = (ext) => {
+    // Check if URL is empty or only whitespace
+    if (!url || !url.trim()) {
+      alert("Please enter a link to generate your QR code.");
+      return;
+    }
+
     if (ext === "pdf") {
       if (!previewCardRef.current) return;
       html2canvas(previewCardRef.current, { scale: 2, backgroundColor: null }).then(canvas => {
